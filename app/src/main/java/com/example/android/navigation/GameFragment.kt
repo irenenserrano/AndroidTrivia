@@ -60,7 +60,7 @@ class GameFragment : Fragment() {
                             "Campus Police and Mathematics",
                             "Computer Programming and Mathematics",
                             "College Physical Maintenance"
-                    )),
+                    ))
    )
 
     lateinit var currentQuestion: Question
