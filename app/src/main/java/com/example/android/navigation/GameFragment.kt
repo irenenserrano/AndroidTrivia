@@ -32,29 +32,36 @@ class GameFragment : Fragment() {
 
     // The first answer is the correct one.  We randomize the answers before showing the text.
     // All questions must have four answers.  We'd want these to contain references to string
-    // resources so we could internationalize. (or better yet, not define the questions in code...)
+    // resources so we could internationalize (or better yet, not define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
-            Question(text = "What is Android Jetpack?",
-                    answers = listOf("all of these", "tools", "documentation", "libraries")),
-            Question(text = "Base class for Layout?",
-                    answers = listOf("ViewGroup", "ViewSet", "ViewCollection", "ViewRoot")),
-            Question(text = "Layout for complex Screens?",
-                    answers = listOf("ConstraintLayout", "GridLayout", "LinearLayout", "FrameLayout")),
-            Question(text = "Pushing structured data into a Layout?",
-                    answers = listOf("Data Binding", "Data Pushing", "Set Text", "OnClick")),
-            Question(text = "Inflate layout in fragments?",
-                    answers = listOf("onCreateView", "onViewCreated", "onCreateLayout", "onInflateLayout")),
-            Question(text = "Build system for Android?",
-                    answers = listOf("Gradle", "Graddle", "Grodle", "Groyle")),
-            Question(text = "Android vector format?",
-                    answers = listOf("VectorDrawable", "AndroidVectorDrawable", "DrawableVector", "AndroidVector")),
-            Question(text = "Android Navigation Component?",
-                    answers = listOf("NavController", "NavCentral", "NavMaster", "NavSwitcher")),
-            Question(text = "Registers app with launcher?",
-                    answers = listOf("intent-filter", "app-registry", "launcher-registry", "app-launcher")),
-            Question(text = "Mark a layout for Data Binding?",
-                    answers = listOf("<layout>", "<binding>", "<data-binding>", "<dbinding>"))
-    )
+            Question(text = "Where did Almudena go to graduate school?",
+                    answers = listOf("UC Berkeley", "MIT", "Princeton", "Stanford")),
+            Question(text = "Where did Susan go to graduate school?",
+                    answers = listOf("Princeton", "UC Berkeley", "MIT", "Stanford")),
+            Question(text = "Where did Ellen go to graduate school?",
+                    answers = listOf("MIT", "Princeton", "UC Berkeley", "Stanford")),
+            Question(text = "Where did Colin go to graduate school?",
+                    answers = listOf("Stanford", "Princeton", "UC Berkeley", "MIT")),
+            Question(text = "Where did Pamela go to graduate school?",
+                    answers = listOf("Stanford", "Princeton", "UC Berkeley", "MIT")),
+            Question(text = "Where does alumna Emily Kager work?",
+                    answers = listOf("Mozilla", "PayPal", "Google", "Twitter")),
+            Question(text = "Where does alumna Gloriane Tran work?",
+                    answers = listOf("PayPal", "Mozilla", "Google", "Twitter")),
+            Question(text = "Where does alumna Taylor Sandusky work?",
+                    answers = listOf("Twitter", "PayPal", "Mozilla", "Google")),
+            Question(text = "Where does alumna Yun Miao work?",
+                    answers = listOf("Google", "Twitter", "PayPal", "Mozilla")),
+            Question(text = "Where does alumna Barbara Ko work?",
+                    answers = listOf("Intuit", "Twitter", "PayPal", "Mozilla")),
+            Question(text = "What does CPM stand for?",
+                    answers = listOf(
+                            "Chemistry Physics and Mathematics",
+                            "Campus Police and Mathematics",
+                            "Computer Programming and Mathematics",
+                            "College Physical Maintenance"
+                    )),
+   )
 
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
