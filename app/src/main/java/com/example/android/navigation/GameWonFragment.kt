@@ -36,7 +36,7 @@ class GameWonFragment : Fragment() {
             v.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
         }
         setHasOptionsMenu(true)
-
+        
         // Show argument values in toast
         val args = GameWonFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context, "NumCorrect ${args.numCorrect}", Toast.LENGTH_SHORT).show()
