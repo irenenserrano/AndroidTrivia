@@ -36,6 +36,10 @@ class GameOverFragment : Fragment() {
             v.findNavController().navigate(R.id.action_gameOverFragment2_to_gameFragment)
         }
 
+        //Show argument values in Toast
+        val args = GameOverFragmentArgs.fromBundle(arguments!!)
+        Toast.makeText(context, "Correct answer to '${args.question}' was ${args.correctAnswer}", Toast.LENGTH_LONG).show()
+
         return binding.root
     }
 }
