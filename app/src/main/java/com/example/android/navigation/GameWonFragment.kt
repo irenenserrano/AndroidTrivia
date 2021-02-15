@@ -19,6 +19,7 @@ package com.example.android.navigation
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -35,6 +36,10 @@ class GameWonFragment : Fragment() {
             v.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
         }
         setHasOptionsMenu(true)
+
+        // Show argument values in toast - WEIRD BUG!!! THE APP CRASHES OUT!
+        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+        Toast.makeText(context, "NumCorrect ${args.numCorrect}", Toast.LENGTH_SHORT).show()
 
         return binding.root
     }
